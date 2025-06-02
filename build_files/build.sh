@@ -22,4 +22,6 @@ dnf5 install -y distrobox gvfs-fuse gvfs-smb gcr
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-systemctl enable --user gcr-ssh-agent.socket
+
+sudo cp /usr/lib/systemd/user/gcr-ssh-agent.socket /etc/systemd/user/
+systemctl enable gcr-ssh-agent.socket
